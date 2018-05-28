@@ -7,7 +7,7 @@ layout: default
     <ul class="numbered-list">
     {% for file in site.static_files %}
         {% if file.extname ==".html" %}
-        <a href="{{file.path}}">
+        <a href="{{site.baseurl}}{{file.path}}">
             <li class="numbered-list_item">
                 <span class="numbered-list__counter"></span>
                 <span class="site">
