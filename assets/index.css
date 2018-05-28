@@ -1,0 +1,44 @@
+body {
+    counter-reset: section;           /* 重置计数器成0 */
+}
+span.numbered-list__counter:before {
+    counter-increment: section;      /* 增加计数器值 */
+    content: counter(section); /* 显示计数器 */
+}
+.numbered-list__counter+span{
+    margin-right: auto;
+}
+span.site{
+    background-color: coral;
+}
+ul{
+    list-style: none;
+}
+ul li{
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #EEE;
+    margin: .5em;
+    padding: .3em 0;
+    height: 1.6em;
+    border-radius: 4px;
+    display: flex;
+}
+span{
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color: #607D8B;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+}
+a{
+    text-decoration: none;
+}

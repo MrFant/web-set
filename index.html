@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div>
+    <h1>Web-Set</h1>
+    <ul class="numbered-list">
+    {% for file in site.static_files %}
+        {% if file.extname ==".html" %}
+        <a href="{{file.path}}">
+            <li class="numbered-list_item">
+                <span class="numbered-list__counter"></span>
+                <span class="site">
+                    {{file.path}}
+                </span>
+                <span>
+                    <label>last modified:   {{file.modified_time}}</label>
+                </span>
+            </li>
+        </a>
+
+
+
+        {% endif %}
+
+    {% endfor %}
+    </ul>
+</div>
